@@ -1,0 +1,34 @@
+catalogs:
+  # Use opm basic veneer
+  - buildConfigs:
+    - basic-catalog1
+    - basic-catalog2
+    buildStrategy:
+      name: opmBasicVeneer
+      opmBasicVeneer:
+        input: basic.yaml
+
+  # Use opm semver veneer
+  - buildConfigs:
+    - semver-catalog
+    buildStrategy:
+      name: opmSemverVeneer
+      opmSemverVeneer:
+        input: semver.yaml
+
+  # Use a custom veneer
+  - buildConfigs:
+    - custom-catalog
+    buildStrategy:
+      name: custom
+      custom:
+        command:
+          - ./custom-build.sh
+  
+  # Use raw FBC
+  - buildConfigs:
+    - raw-catalog
+    buildStrategy:
+      name: raw
+      raw:
+        dir: raw

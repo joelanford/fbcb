@@ -1,0 +1,32 @@
+packagesBaseDir: packages
+catalogs:
+  - name: basic-catalog1
+    destination:
+      baseImage: quay.io/operator-framework/opm:latest
+      extraLabels:
+        kind: basic
+      outputImage: quay.io/joelanford/fbcb-example:basic1
+  - name: basic-catalog2
+    destination:
+      baseImage: quay.io/operator-framework/opm:latest
+      extraLabels:
+        kind: basic
+      outputImage: quay.io/joelanford/fbcb-example:basic2
+  - name: semver-catalog
+    destination:
+      baseImage: quay.io/operator-framework/opm:latest
+      extraLabels:
+        kind: semver
+      outputImage: quay.io/joelanford/fbcb-example:semver
+  - name: custom-catalog
+    destination:
+      baseImage: quay.io/operator-framework/opm:latest
+      extraLabels:
+        kind: custom
+      outputImage: quay.io/joelanford/fbcb-example:custom
+  - name: raw-catalog
+    destination:
+      baseImage: quay.io/operator-framework/opm:latest
+      extraLabels:
+        kind: raw
+      outputImage: quay.io/joelanford/fbcb-example:raw

@@ -1,0 +1,17 @@
+catalogs:
+  # Use a custom veneer
+  - buildConfigs:
+    - custom-catalog
+    buildStrategy:
+      name: custom
+      custom:
+        command:
+          - ./custom-build.sh
+
+  # Use raw FBC
+  - buildConfigs:
+    - raw-catalog
+    buildStrategy:
+      name: raw
+      raw:
+        dir: raw

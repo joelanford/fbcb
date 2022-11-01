@@ -1,0 +1,8 @@
+---
+schema: olm.semver
+generateMajorChannels: true
+generateMinorChannels: true
+stable:
+  bundles:
+  - image: quay.io/openshift-community-operators/cockroachdb@sha256:cc7a411ebbc88f4944b9ada878f78ce14b70a6150ca62df97a94d4942ff0cf43
+  - image: quay.io/openshift-community-operators/cockroachdb@sha256:82b5508b3554815750b8efdcf43c9bcf94d5ab40a9e03263b6f4481d4cd3bca9
